@@ -6,7 +6,7 @@ const Header = () => {
       {/* Logo et Titre */}
       <div className="flex items-center gap-4 mb-4 md:mb-0">
         <img
-          src="/logo.png"
+          src="/logo.jpg"
           alt="Logo de MANGUIMISSOUTEXTILE"
           className="w-12 h-12 sm:w-16 sm:h-16 rounded-full"
         />

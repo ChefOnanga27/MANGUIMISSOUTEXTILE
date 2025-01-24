@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
 import Header from "../Components/header/page";
-import OrderButton from "../Components/commander/OrderButton";
+import OrderButton from "../Components/OrderButtonProps"
 
 export default function Products() {
   const products = [
@@ -10,21 +9,21 @@ export default function Products() {
       id: 1,
       name: "Tissu Premium",
       description: "Tissu de haute qualité, idéal pour les créations élégantes.",
-      imageUrl: "/tissu1.jpg", // Remplace par le chemin correct de l'image
+      imageUrl: "/tissu1.jpg", // Remplace par l'image de ton produit
       price: "€30",
     },
     {
       id: 2,
       name: "Tissu Imprimé",
       description: "Tissu imprimé avec des motifs uniques, parfait pour la mode.",
-      imageUrl: "/tissu2.jpg", // Remplace par le chemin correct de l'image
+      imageUrl: "/tissu2.jpg", // Remplace par l'image de ton produit
       price: "€25",
     },
     {
       id: 3,
       name: "Tissu Naturel",
       description: "Tissu fabriqué à partir de fibres naturelles pour un confort optimal.",
-      imageUrl: "/tissu3.jpg", // Remplace par le chemin correct de l'image
+      imageUrl: "/tissu3.jpg", // Remplace par l'image de ton produit
       price: "€40",
     },
   ];
@@ -34,7 +33,7 @@ export default function Products() {
       {/* Header */}
       <Header />
       
-      {/* Section Produits */}
+      {/* Section "Produits" */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-screen-xl mx-auto px-4">
           <h2 className="text-5xl font-extrabold text-center text-gray-900 mb-12">

@@ -52,7 +52,7 @@ export default function Hero() {
   <div className="relative z-10 flex items-center justify-between h-full text-white p-5">
     {/* Partie Texte */}
     <div className="flex-1 pl-10">
-    <h1 className="text-5xl font-extrabold text-green-600 leading-tight drop-shadow-[0_0_20px_rgba(34,197,94,1)]">
+    <h1 className="text-6xl font-extrabold text-white opacity-100 leading-tight drop-shadow-[0_0_20px_rgba(34,197,94,1)]">
         Bienvenue chez Manguimissou Textile
       </h1>
       <p className="mt-4 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
@@ -83,22 +83,22 @@ export default function Hero() {
       {/* Carrousel (optionnel, en bas de l'écran ou ailleurs) */}
       <div className="absolute bottom-10 left-1/2 bg-blue-600 transform -translate-x-1/2 w-full max-w-4xl">
         <Slider {...settings}>
-          <div className="p-6 bg-white rounded-xl bg-gray-400 shadow-lg">
+          <div className="p-6 rounded-xl bg-gray-400 shadow-lg">
             <div className="flex flex-col items-center space-y-4">
               <h3 className="text-2xl font-bold text-gray-800 text-white">
                 Nos textiles haut de gamme
               </h3>
-              <p className="text-gray-600 text-white bg-gray-400">
+              <p className=" text-white bg-gray-400">
                 Explorez notre collection de tissus modernes et élégants, parfaits pour toutes vos créations.
               </p>
             </div>
           </div>
           <div className="p-6 bg-gray-400 rounded-xl shadow-lg">
             <div className="flex flex-col items-center space-y-4">
-              <h3 className="text-2xl font-bold text-gray-800">
+              <h3 className="text-2xl font-bold text-gray-800 text-white bg-gray-400">
                 Livraison rapide et fiable
               </h3>
-              <p className="text-gray-600">
+              <p className="text-white">
                 Profitez de nos services d'expédition rapides et fiables, où que vous soyez dans le monde.
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function Hero() {
               <h3 className="text-2xl font-bold text-gray-800 text-white">
                 Des designs uniques
               </h3>
-              <p className="text-gray-600">
+              <p className="text-white">
                 Nos designs sont créés avec soin et attention aux détails, pour des créations exclusives.
               </p>
             </div>

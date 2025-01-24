@@ -2,7 +2,7 @@
 
 import Header from "../Components/header/page";
 import OrderButton from "../Components/OrderButtonProps"
-
+import Footer from "../Components/footer/page"
 export default function Products() {
   const products = [
     {
@@ -70,6 +70,7 @@ export default function Products() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

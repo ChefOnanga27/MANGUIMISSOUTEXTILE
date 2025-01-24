@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <section
   className="relative h-screen w-full overflow-hidden bg-cover bg-center"
-  style={{ backgroundImage: "url('/jaune.jpg')" }} // Remplacer par ton image dans le dossier public
+  style={{ backgroundImage: "url('/mel.jpg')" }} // Remplacer par ton image dans le dossier public
 >
   {/* Animation de fond */}
   <div className="absolute inset-0">
@@ -48,26 +48,11 @@ export default function Hero() {
     <div className="floating-circle absolute top-1/2 left-1/3 w-40 h-40 bg-white rounded-full opacity-10"></div>
   </div>
 
-  {/* Texte défilant */}
-  <div className="absolute top-5 left-0 w-full overflow-hidden">
-    <div className="animate-marquee whitespace-nowrap text-center text-white text-xl font-semibold">
-      <span className="inline-block mx-4">
-        Seulement pour vous!
-      </span>
-      <span className="inline-block mx-4">
-        Explorez des textiles uniques et de qualité exceptionnelle.
-      </span>
-      <span className="inline-block mx-4">
-        Restez curieux et découvrez notre univers créatif !
-      </span>
-    </div>
-  </div>
-
   {/* Contenu de la section Hero */}
   <div className="relative z-10 flex items-center justify-between h-full text-white p-5">
     {/* Partie Texte */}
     <div className="flex-1 pl-10">
-      <h1 className="text-5xl font-extrabold drop-shadow-md leading-tight">
+    <h1 className="text-5xl font-extrabold text-green-600 leading-tight drop-shadow-[0_0_20px_rgba(34,197,94,1)]">
         Bienvenue chez Manguimissou Textile
       </h1>
       <p className="mt-4 text-lg md:text-xl max-w-xl mx-auto leading-relaxed">
@@ -86,19 +71,9 @@ export default function Hero() {
     <div className="flex-1 flex justify-between">
       {/* Image à gauche */}
       <div className="w-1/3">
-        <img
-          src="/anime.gif" // Remplacer par ton image
-          alt="Image gauche"
-          className="w-full h-full object-cover rounded-md"
-        />
       </div>
       {/* Image à droite */}
       <div className="w-1/3">
-        <img
-          src="/mel.jpg" // Remplacer par ton image
-          alt="Image droite"
-          className="w-full h-full object-cover rounded-md"
-        />
       </div>
     </div>
   </div>
@@ -106,19 +81,19 @@ export default function Hero() {
 
 
       {/* Carrousel (optionnel, en bas de l'écran ou ailleurs) */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
+      <div className="absolute bottom-10 left-1/2 bg-blue-600 transform -translate-x-1/2 w-full max-w-4xl">
         <Slider {...settings}>
-          <div className="p-6 bg-white rounded-xl shadow-lg">
+          <div className="p-6 bg-white rounded-xl bg-gray-400 shadow-lg">
             <div className="flex flex-col items-center space-y-4">
-              <h3 className="text-2xl font-bold text-gray-800">
+              <h3 className="text-2xl font-bold text-gray-800 text-white">
                 Nos textiles haut de gamme
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-white bg-gray-400">
                 Explorez notre collection de tissus modernes et élégants, parfaits pour toutes vos créations.
               </p>
             </div>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow-lg">
+          <div className="p-6 bg-gray-400 rounded-xl shadow-lg">
             <div className="flex flex-col items-center space-y-4">
               <h3 className="text-2xl font-bold text-gray-800">
                 Livraison rapide et fiable
@@ -128,9 +103,9 @@ export default function Hero() {
               </p>
             </div>
           </div>
-          <div className="p-6 bg-white rounded-xl shadow-lg">
+          <div className="p-6 bg-gray-400 rounded-xl shadow-lg">
             <div className="flex flex-col items-center space-y-4">
-              <h3 className="text-2xl font-bold text-gray-800">
+              <h3 className="text-2xl font-bold text-gray-800 text-white">
                 Des designs uniques
               </h3>
               <p className="text-gray-600">

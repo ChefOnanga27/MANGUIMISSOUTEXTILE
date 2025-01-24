@@ -34,7 +34,9 @@ const FeaturedProducts: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-20">
         {/* Titre de la section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-800">Nos Produits Phares</h2>
+          <h2 className="text-4xl font-extrabold text-gray-800">
+            Nos Produits Phares
+          </h2>
           <p className="mt-4 text-lg text-gray-600">
             Découvrez nos produits les plus populaires, sélectionnés pour répondre à vos besoins.
           </p>
@@ -45,17 +47,23 @@ const FeaturedProducts: React.FC = () => {
           {featuredProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-white rounded-lg shadow-md hover:shadow-xl overflow-hidden transition-shadow duration-300"
             >
               <img
                 src={product.image}
-                alt={product.title}
+                alt={`Image de ${product.title}`}
                 className="w-full h-56 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800">{product.title}</h3>
+                <h3 className="text-xl font-bold text-gray-800">
+                  {product.title}
+                </h3>
                 <p className="mt-4 text-gray-600">{product.description}</p>
-                <button className="mt-6 px-6 py-2 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">
+                <button
+                  className="mt-6 px-6 py-2 bg-yellow-500 text-white font-bold rounded-full 
+                  hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 
+                  transition duration-300"
+                >
                   En savoir plus
                 </button>
               </div>

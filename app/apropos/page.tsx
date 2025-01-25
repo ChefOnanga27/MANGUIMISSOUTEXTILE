@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 import Header from "../Components/header/page";
+import Footer from "../Components/footer/page";
 
 export default function About() {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -28,14 +29,14 @@ export default function About() {
       {/* Section "À Propos" */}
       <section
         id="about"
-        className="relative text-white bg-gradient-to-r from-amber-600 to-[#FFBF00]" // Applique le dégradé de fond
+        className="relative text-black opacity-80 bg-white]" // Applique le dégradé de fond
       >
         {/* Titre avec image de fond */}
         <div
-          className="relative w-full h-96 bg-cover bg-center"
-          style={{ backgroundImage: 'url("/image-background.jpg")' }} // Remplace par ton image de fond
+          className="relative w-full h-96  opacity-100 bg-center"
+          style={{backgroundImage:"url('/agence.avif')"}}
         >
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl font-extrabold text-shadow-lg">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-white opaciy-100 font-extrabold text-shadow-lg">
             À Propos de Manguimissou Textile
           </h1>
         </div>
@@ -51,7 +52,6 @@ export default function About() {
               les meilleurs matériaux et offrir une expérience client inégalée.
             </p>
           </div>
-
           {/* Section 2 - Mission */}
           <div className="mb-16">
             <h3 className="text-3xl font-semibold mb-4 text-shadow-lg">Notre mission</h3>
@@ -73,6 +73,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

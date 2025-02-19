@@ -1,8 +1,9 @@
+
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex flex-wrap justify-between items-center bg-pink-900 p-4 text-white">
+    <header className="flex flex-wrap justify-between items-center bg-amber-900 p-4 text-white">
       {/* Logo et Titre */}
       <div className="flex items-center gap-4 mb-4 md:mb-0">
         <img
@@ -44,7 +45,7 @@ const Header = () => {
           </li>
           <li className="group">
             <Link
-              href="/contacts"
+              href="/contact"
               className="hover:text-yellow-300 px-2 sm:px-3 py-2 transition duration-300"
             >
               Contacts
@@ -52,12 +53,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-
-      {/* Bouton Commander */}
-      <button className="bg-white text-orange-500 font-bold px-3 py-2 sm:px-4 sm:py-2 rounded-full shadow-md hover:bg-yellow-300 hover:text-white transition duration-300">
-        Commander
-      </button>
-    </header>
+      </header>
   );
 };
 

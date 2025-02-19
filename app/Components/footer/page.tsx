@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="bg-pink-900 opacity-100 text-white py-10 mt-20">
+      <footer className="bg-amber-900 opacity-100 text-white py-10 mt-20">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Conteneur principal */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -16,22 +16,22 @@ export default function Footer() {
             <div>
               <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
                 <li>
-                  <a href="#home" className="hover:text-yellow-300">
+                  <a href="/" className="hover:text-yellow-300">
                     Accueil
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="hover:text-yellow-300">
+                  <a href="/apropos" className="hover:text-yellow-300">
                     À Propos
                   </a>
                 </li>
                 <li>
-                  <a href="#products" className="hover:text-yellow-300">
+                  <a href="#produits" className="hover:text-yellow-300">
                     Produits
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-yellow-300">
+                  <a href="/contact" className="hover:text-yellow-300">
                     Contacts
                   </a>
                 </li>

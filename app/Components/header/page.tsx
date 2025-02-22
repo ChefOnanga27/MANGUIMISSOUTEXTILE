@@ -36,7 +36,7 @@ const Header = () => {
             menuOpen ? "block" : "hidden"
           } md:flex`}
         >
-          {["Accueil", "Produits", "A propos", "Contacts"].map((item, index) => (
+          {["Accueil", "Produits", "A propos", "Contact"].map((item, index) => (
             <Link
               key={index}
               href={item === "Accueil" ? "/" : `/${item.toLowerCase().replace(" ", "")}`}

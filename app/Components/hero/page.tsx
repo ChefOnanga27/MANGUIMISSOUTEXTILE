@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <section
       className="relative h-screen w-full overflow-hidden bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: "url('/pagne6.jpg')" }}
+      style={{ backgroundImage: "url('/mel.jpg')" }}
     >
       {/* Animation de fond */}
       <div className="absolute inset-0">

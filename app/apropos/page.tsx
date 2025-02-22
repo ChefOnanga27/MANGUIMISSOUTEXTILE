@@ -2,18 +2,19 @@
 
 import { useEffect, useRef } from "react";
 import anime from "animejs";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Header from "../Components/header/page";
 import Footer from "../Components/footer/page";
 
 export default function About() {
-  const backgroundRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef(null);
 
   useEffect(() => {
-    // Animation du fond pour un effet subtil
     if (backgroundRef.current) {
       anime({
         targets: backgroundRef.current,
-        opacity: [0.8, 1],
+        opacity: [0.7, 1],
         easing: "easeInOutSine",
         duration: 5000,
         direction: "alternate",
@@ -22,61 +23,81 @@ export default function About() {
     }
   }, []);
 
+  const sections = [
+    {
+      title: "Notre Histoire",
+      content:
+        "Fondée en 2020, Manguimissou Textile est née d'une passion pour les tissus de qualité et la mode. Depuis, nous nous engageons à sélectionner les meilleurs matériaux et à offrir une expérience inégalée à nos clients.",
+      image: "/history.jpg",
+    },
+    {
+      title: "Notre Mission",
+      content:
+        "Nous nous efforçons de proposer des tissus inspirants et accessibles aux créateurs, designers et particuliers, tout en mettant en avant qualité et raffinement.",
+      image: "/mission.jpg",
+    },
+    {
+      title: "Nos Valeurs",
+      content:
+        "Nos principes fondamentaux reposent sur la qualité, l'innovation et la durabilité. Chaque tissu que nous créons incarne ces valeurs pour garantir satisfaction et excellence.",
+      image: "/tech.jpg",
+    },
+  ];
+
   return (
     <>
-      {/* Header */}
       <Header />
 
-      {/* Section "À Propos" */}
       <section
         id="about"
         ref={backgroundRef}
-        className="relative text-gray-800 bg-gradient-to-r from-blue-50 via-white to-pink-50"
+        className="relative text-gray-800 bg-gradient-to-r from-blue-100 via-white to-pink-100 overflow-hidden"
       >
-        {/* Titre de la section */}
         <div className="relative w-full py-24 text-center">
-          <h1 className="text-5xl font-extrabold text-gray-900 drop-shadow-md">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-6xl font-extrabold text-gray-900 drop-shadow-md"
+          >
             À Propos de <span className="text-primary">Manguimissou Textile</span>
-          </h1>
-          <p className="mt-4 text-lg text-gray-600">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="mt-6 text-xl text-gray-700 font-medium"
+          >
             Découvrez notre passion pour le textile et l'innovation.
-          </p>
+          </motion.p>
         </div>
 
-        {/* Contenu structuré */}
-        <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
-
-          {/* Notre Histoire */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h3 className="text-3xl font-semibold text-primary">Notre Histoire</h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Fondée en 2020, Manguimissou Textile est née d'une passion pour les tissus 
-              de qualité et la mode. Depuis, nous nous engageons à sélectionner les meilleurs matériaux 
-              et à offrir une expérience inégalée à nos clients.
-            </p>
-          </div>
-
-          {/* Notre Mission */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h3 className="text-3xl font-semibold text-primary">Notre Mission</h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Nous nous efforçons de proposer des tissus inspirants et accessibles aux créateurs,
-              designers et particuliers, tout en mettant en avant qualité et raffinement.
-            </p>
-          </div>
-
-          {/* Nos Valeurs */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <h3 className="text-3xl font-semibold text-primary">Nos Valeurs</h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Nos principes fondamentaux reposent sur la qualité, l'innovation et la durabilité.
-              Chaque tissu que nous créons incarne ces valeurs pour garantir satisfaction et excellence.
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto px-8 py-20 space-y-20">
+          {sections.map((section, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.3 }}
+              className="flex flex-col md:flex-row items-center text-center md:text-left space-y-8 md:space-y-0 md:space-x-12"
+            >
+              <Image
+                src={section.image}
+                alt={section.title}
+                width={550}
+                height={350}
+                className="w-full md:w-1/2 rounded-lg shadow-2xl"
+              />
+              <div className="md:w-1/2">
+                <h3 className="text-4xl font-bold text-primary">{section.title}</h3>
+                <p className="text-xl text-gray-800 leading-relaxed font-medium">{section.content}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </>
   );

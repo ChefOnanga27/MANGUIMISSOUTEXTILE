@@ -25,7 +25,7 @@ export default function Home() {
       <section className="bg-grey-100 text-black px-8 md:px-24 py-16 shadow-lg">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-extrabold text-amber-950">
-            Bienvenue chez <span className="text-black">Manguimissou Textile</span> !
+             Chez <span className="text-black">Manguimissou Textile</span> !
           </h2>
           <p className="text-lg md:text-xl leading-relaxed text-black">
             Découvrez une large sélection de tissus africains de qualité premium, des couvre-chefs élégants et des accessoires de mode uniques.

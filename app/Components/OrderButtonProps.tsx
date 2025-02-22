@@ -11,7 +11,7 @@ const OrderButton: React.FC<OrderButtonProps> = ({
   productPrice,
   productDescription,
 }) => {
-  const phoneNumber = "1234567890"; // Remplace par ton numéro WhatsApp
+  const phoneNumber = "241062891575"; // Remplace par ton numéro WhatsApp
   const message = `Bonjour, je suis intéressé par le produit suivant :\n\nNom : ${productName}\nPrix : ${productPrice}\nDescription : ${productDescription}\n\nMerci !`;
 
   const handleOrderClick = () => {

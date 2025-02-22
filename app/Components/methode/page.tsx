@@ -59,10 +59,10 @@ export default function Techniques() {
   ];
 
   return (
-    <section className="bg-amber-200 py-16">
+    <section className="bg-grey-200/80 py-16">
       <div className="max-w-screen-xl mx-auto px-4">
         {/* Titre */}
-        <h1 className="text-5xl font-extrabold text-left text-primary mb-12 tracking-wide">
+        <h1 className="text-5xl font-extrabold text-center text-primary mb-12 tracking-wide">
           Nouveaux Tissus Africains
         </h1>
 

@@ -24,7 +24,7 @@ const FeedbackForm: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-amber-200 text-center">
+    <section className="py-16 bg-white text-center">
       <h2 className="text-3xl font-bold text-[#d88041] mb-8">Laissez votre avis</h2>
       <div className="w-4/5 mx-auto bg-white p-6 rounded-lg shadow-lg border border-[#8B4513]">
         {!submitted ? (

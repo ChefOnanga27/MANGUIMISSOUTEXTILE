@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Header from "../Components/header/page";
 import Footer from "../Components/footer/page";
 
@@ -21,13 +22,15 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-2xl">
-      <div className="relative">
-        <img
+      <div className="relative w-full h-64">
+        <Image
           src={product.imageUrl}
           alt={`Image de ${product.name}`}
-          className="w-full h-64 object-cover rounded-t-lg filter brightness-95 hover:brightness-100 transition-all"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-t-lg filter brightness-95 hover:brightness-100 transition-all"
         />
-        <div className="absolute top-2 right-2 bg-secondary text-white px-3 py-1 rounded-lg text-sm font-semibold">
+        <div className="absolute top-2 right-2 bg-secondary text-black px-3 py-1 rounded-lg text-sm font-semibold">
           {product.price.toLocaleString()} FCFA
         </div>
       </div>
@@ -40,7 +43,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block mt-4 bg-green-500 text-white font-semibold py-2 px-4 rounded-lg text-center hover:bg-green-600 transition"
+          className="block mt-4 bg-green-500 text-black font-semibold py-2 px-4 rounded-lg text-center hover:bg-green-600 transition"
         >
           Commander sur WhatsApp
         </a>
@@ -55,8 +58,8 @@ export default function Products() {
 
   // Liste des produits
   const products: Product[] = [
-    { id: 1, name: "Sac à dos en pagne", description: "Élégant et résistant.", imageUrl: "/sac-a-dos-en-tissu2.jpg", price: 15000, category: "Sac à dos" },
-    { id: 2, name: "Sac à dos special", description: "Parfait pour le quotidien.", imageUrl: "/sac-a-dos-en-tissu.jpg", price: 12000, category: "Sac à dos" },
+    { id: 1, name: "Sac à dos en pagne", description: "Élégant et résistant.", imageUrl: "/sac-a-dos-en-tissu 2.jpg", price: 15000, category: "Sac à dos" },
+    { id: 2, name: "Sac à dos spécial", description: "Parfait pour le quotidien.", imageUrl: "/sac-a-dos-en-tissu.jpg", price: 12000, category: "Sac à dos" },
     { id: 3, name: "Pagne wax africain", description: "Tissu coloré de qualité.", imageUrl: "/pagne3.jpg", price: 7200, category: "Pagne" },
     { id: 4, name: "Pagne en coton", description: "Idéal pour la couture.", imageUrl: "/pagne2.jpg", price: 10500, category: "Pagne" },
     { id: 5, name: "Pagne de haute qualité", description: "Tissu en coton motifs floraux.", imageUrl: "/pagne1.jpg", price: 7200, category: "Pagne" },
@@ -75,11 +78,11 @@ export default function Products() {
       <Header />
 
       {/* Section Produits */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-screen-xl mx-auto px-4">
           {/* Titre */}
           <h1 className="text-6xl font-extrabold text-center text-primary mb-12 tracking-wide">
-            Découvrez Nos Produits
+            Découvrez Nos Articles
           </h1>
 
           {/* Filtres */}

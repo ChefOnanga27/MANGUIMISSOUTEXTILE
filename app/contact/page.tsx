@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import Header from "../Components/header/page";
 import Footer from "../Components/footer/page";
@@ -58,6 +56,19 @@ export default function Contact() {
           <h2 className="text-5xl font-extrabold text-center text-primary mb-12">
             Contactez-moi
           </h2>
+
+          {/* Invitation à contacter */}
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-700">
+              N'hésitez pas à nous contacter pour toute question ou information. Vous pouvez nous envoyer un message via ce formulaire ou nous joindre directement sur WhatsApp en cliquant sur le bouton ci-dessous.
+            </p>
+            <a
+              href="https://wa.me/24177123456" // Remplacez par votre lien WhatsApp
+              className="mt-4 inline-block bg-green-500 text-white py-3 px-8 rounded-lg font-semibold text-lg hover:bg-green-600 transition-all"
+            >
+              Contacter sur WhatsApp
+            </a>
+          </div>
 
           <div className="bg-white shadow-lg rounded-lg p-8">
             {/* Message de succès */}
